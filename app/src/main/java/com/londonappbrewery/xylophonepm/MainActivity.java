@@ -2,6 +2,7 @@ package com.londonappbrewery.xylophonepm;
 
 import android.content.Context;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private int mBSoundId;
     private SoundPool mSoundPool;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
         mSoundPool = new SoundPool(NUM_OF_SIMULTANEOUS_SOUNDS,
                         AudioManager.STREAM_MUSIC,
                         0);
-
-
 
         // TODO: Load and get the IDs to identify the sounds
         mCSoundId = mSoundPool.load(getApplicationContext(),
@@ -57,12 +57,12 @@ public class MainActivity extends AppCompatActivity {
         mBSoundId = mSoundPool.load(getApplicationContext(),
                 R.raw.note7_b, 1);
 
-
     }
 
     // TODO: Add the play methods triggered by the buttons
     public void playC(View v) {
         //Log.d("Xylaphone", "Red key clicked!");
+//
         mSoundPool.play(mCSoundId,
                 LEFT_VOLUME,
                 RIGHT_VOLUME,
@@ -71,22 +71,70 @@ public class MainActivity extends AppCompatActivity {
                 NORMAL_PLAY_RATE);
     }
     public void playD(View v) {
+
         Log.d("Xylaphone", "Orange key clicked!");
+
+        mSoundPool.play(mDSoundId,
+                LEFT_VOLUME,
+                RIGHT_VOLUME,
+                PRIORITY,
+                NO_LOOP,
+                NORMAL_PLAY_RATE);
     }
     public void playE(View v) {
+
         Log.d("Xylaphone", "Yellow key clicked!");
+
+        mSoundPool.play(mESoundId,
+                LEFT_VOLUME,
+                RIGHT_VOLUME,
+                PRIORITY,
+                NO_LOOP,
+                NORMAL_PLAY_RATE);
     }
     public void playF(View v) {
+
         Log.d("Xylaphone", "Green key clicked!");
+
+        mSoundPool.play(mFSoundId,
+                LEFT_VOLUME,
+                RIGHT_VOLUME,
+                PRIORITY,
+                NO_LOOP,
+                NORMAL_PLAY_RATE);
     }
     public void playG(View v) {
+
         Log.d("Xylaphone", "Turqiose key clicked!");
+
+        mSoundPool.play(mGSoundId,
+                LEFT_VOLUME,
+                RIGHT_VOLUME,
+                PRIORITY,
+                NO_LOOP,
+                NORMAL_PLAY_RATE);
     }
     public void playA(View v) {
+
         Log.d("Xylaphone", "Blue key clicked!");
+
+        mSoundPool.play(mASoundId,
+                LEFT_VOLUME,
+                RIGHT_VOLUME,
+                PRIORITY,
+                NO_LOOP,
+                NORMAL_PLAY_RATE);
     }
     public void playB(View v) {
+
         Log.d("Xylaphone", "Purple key clicked!");
+
+        mSoundPool.play(mBSoundId,
+                LEFT_VOLUME,
+                RIGHT_VOLUME,
+                PRIORITY,
+                NO_LOOP,
+                NORMAL_PLAY_RATE);
     }
 
 
